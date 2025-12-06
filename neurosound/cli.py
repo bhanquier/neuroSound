@@ -55,7 +55,7 @@ GitHub: https://github.com/bhanquier/neuroSound
     parser.add_argument(
         '-v', '--version',
         action='version',
-        version='NeuroSound 3.1.0'
+        version='NeuroSound 3.2.0'
     )
     
     args = parser.parse_args()

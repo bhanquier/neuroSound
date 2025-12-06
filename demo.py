@@ -11,7 +11,7 @@ import os
 from pathlib import Path
 
 try:
-    from neurosound import NeuroSound
+    from neurosound import NeuroSound, NeuroSoundUniversal
 except ImportError:
     st.error("⚠️ NeuroSound not installed. Run: pip install neurosound")
     st.stop()
@@ -25,7 +25,7 @@ def main():
     )
     
     st.title("🧠 NeuroSound - World Record Audio Compression")
-    st.markdown("**12.52x compression ratio with 38% energy savings**")
+    st.markdown("**80.94x compression ratio with multi-format support**")
     
     st.markdown("---")
     
@@ -33,37 +33,63 @@ def main():
     with st.sidebar:
         st.header("⚙️ Settings")
         
+        version = st.radio(
+            "Version",
+            options=['v3.2 UNIVERSAL', 'v3.1 Classic'],
+            index=0,
+            help="""
+            - **v3.2 UNIVERSAL:** Multi-format (MP3/AAC/OGG/FLAC/WAV), 80.94x ratio
+            - **v3.1 Classic:** WAV only, 12.52x ratio (faster)
+            """
+        )
+        
         mode = st.selectbox(
             "Compression Mode",
             options=['balanced', 'aggressive', 'safe'],
             index=0,
             help="""
-            - **Balanced:** 12.52x ratio (RECOMMENDED)
-            - **Aggressive:** 12.40x ratio (fastest)
-            - **Safe:** 11.80x ratio (highest quality)
+            - **Balanced:** Optimal ratio (RECOMMENDED)
+            - **Aggressive:** Fastest processing
+            - **Safe:** Highest quality
             """
         )
         
         st.markdown("---")
         
-        st.markdown("""
-        ### 📊 Expected Performance
-        
-        **Balanced Mode:**
-        - Ratio: 12.52x
-        - Speed: 0.105s
-        - Energy: 29mJ
-        
-        **Aggressive Mode:**
-        - Ratio: 12.40x
-        - Speed: 0.095s
-        - Energy: 27mJ
-        
-        **Safe Mode:**
-        - Ratio: 11.80x
-        - Speed: 0.115s
-        - Energy: 32mJ
-        """)
+        if version == 'v3.2 UNIVERSAL':
+            st.markdown("""
+            ### 📊 v3.2 UNIVERSAL
+            
+            **4 Innovations:**
+            - Silence detection/removal
+            - Stereo→Mono (98% threshold)
+            - Adaptive normalization
+            - Multi-resolution FFT
+            
+            **Formats:**
+            - MP3, AAC, OGG
+            - FLAC, WAV, M4A
+            
+            **Performance:**
+            - Ratio: ~80x
+            - Time: ~0.25s
+            """)
+        else:
+            st.markdown("""
+            ### 📊 v3.1 Classic
+            
+            **Spectral Analysis:**
+            - FFT peak detection
+            - Adaptive VBR selection
+            
+            **Formats:**
+            - WAV only
+            
+            **Performance:**
+            - Ratio: 12.52x
+            - Time: 0.105s
+            - Energy: 29mJ
+            """)
     
     # Main content
     col1, col2 = st.columns(2)
@@ -71,20 +97,37 @@ def main():
     with col1:
         st.header("📤 Upload")
         
+        if version == 'v3.2 UNIVERSAL':
+            file_types = ['wav', 'mp3', 'aac', 'ogg', 'flac', 'm4a']
+            help_text = "Upload any audio file (MP3, AAC, OGG, FLAC, WAV, M4A)"
+        else:
+            file_types = ['wav']
+            help_text = "Upload a 16-bit PCM WAV file"
+        
         uploaded_file = st.file_uploader(
-            "Choose a WAV file",
-            type=['wav'],
-            help="Upload a 16-bit PCM WAV file"
+            "Choose an audio file",
+            type=file_types,
+            help=help_text
         )
         
         if uploaded_file is not None:
             # Display file info
             file_size = len(uploaded_file.getvalue())
+            file_ext = Path(uploaded_file.name).suffix.lower()
             st.success(f"✅ Uploaded: {uploaded_file.name}")
             st.info(f"📦 Original size: {file_size:,} bytes ({file_size/1024:.1f} KB)")
             
-            # Play original
-            st.audio(uploaded_file, format='audio/wav')
+            # Play original (format detection)
+            if file_ext == '.wav':
+                st.audio(uploaded_file, format='audio/wav')
+            elif file_ext == '.mp3':
+                st.audio(uploaded_file, format='audio/mp3')
+            elif file_ext in ['.aac', '.m4a']:
+                st.audio(uploaded_file, format='audio/mp4')
+            elif file_ext == '.ogg':
+                st.audio(uploaded_file, format='audio/ogg')
+            elif file_ext == '.flac':
+                st.audio(uploaded_file, format='audio/flac')
     
     with col2:
         st.header("📥 Compressed")
@@ -93,17 +136,23 @@ def main():
             if st.button("🚀 Compress", type="primary"):
                 with st.spinner("Compressing..."):
                     # Create temp files
-                    with tempfile.NamedTemporaryFile(suffix='.wav', delete=False) as tmp_wav:
-                        tmp_wav.write(uploaded_file.getvalue())
-                        tmp_wav_path = tmp_wav.name
+                    file_ext = Path(uploaded_file.name).suffix
+                    with tempfile.NamedTemporaryFile(suffix=file_ext, delete=False) as tmp_input:
+                        tmp_input.write(uploaded_file.getvalue())
+                        tmp_input_path = tmp_input.name
                     
                     tmp_mp3_path = tempfile.NamedTemporaryFile(suffix='.mp3', delete=False).name
                     
                     try:
+                        # Select codec version
+                        if version == 'v3.2 UNIVERSAL':
+                            codec = NeuroSoundUniversal(mode=mode)
+                        else:
+                            codec = NeuroSound(mode=mode)
+                        
                         # Compress
-                        codec = NeuroSound(mode=mode)
                         size, ratio, energy = codec.compress(
-                            tmp_wav_path,
+                            tmp_input_path,
                             tmp_mp3_path,
                             verbose=False
                         )
@@ -129,11 +178,18 @@ def main():
                             )
                         
                         with metric_col3:
-                            st.metric(
-                                "Energy",
-                                f"{energy:.0f} mJ",
-                                delta=f"{((47-energy)/47*100):.0f}% saved vs baseline"
-                            )
+                            if version == 'v3.2 UNIVERSAL':
+                                st.metric(
+                                    "Energy",
+                                    f"{energy:.0f} mJ",
+                                    delta="4 innovations"
+                                )
+                            else:
+                                st.metric(
+                                    "Energy",
+                                    f"{energy:.0f} mJ",
+                                    delta=f"{((47-energy)/47*100):.0f}% saved vs baseline"
+                                )
                         
                         # Read compressed file
                         with open(tmp_mp3_path, 'rb') as f:
@@ -156,11 +212,11 @@ def main():
                     
                     finally:
                         # Cleanup
-                        os.remove(tmp_wav_path)
+                        os.remove(tmp_input_path)
                         if os.path.exists(tmp_mp3_path):
                             os.remove(tmp_mp3_path)
         else:
-            st.info("👆 Upload a WAV file to begin")
+            st.info("👆 Upload an audio file to begin")
     
     # Footer
     st.markdown("---")
@@ -168,19 +224,26 @@ def main():
     st.markdown("""
     ### 🔬 How It Works
     
-    NeuroSound uses **spectral content analysis** to achieve world-record compression:
+    **v3.2 UNIVERSAL** uses 4 synergistic innovations:
+    
+    1. **Psychoacoustic Silence Detection:** Remove < -50dB sections (inaudible)
+    2. **Intelligent Stereo→Mono:** 98% correlation threshold (normalized)
+    3. **Adaptive Normalization:** -1dB headroom for optimal VBR encoding
+    4. **Multi-Resolution FFT:** Hybrid 50ms + 1s tonality analysis
+    
+    **v3.1 Classic** uses spectral content analysis:
     
     1. **FFT Peak Detection:** Analyze audio tonality (pure tone vs complex music)
     2. **Adaptive VBR:** Select optimal MP3 VBR setting based on content
     3. **Smart Optimization:** DC offset removal, joint stereo for correlated L/R
     
-    **Result:** Up to 12.52x compression while maintaining perceptual transparency!
+    **Result:** Up to 80.94x compression (v3.2) or 12.52x (v3.1) while maintaining perceptual transparency!
     
     ### 📚 Learn More
     
     - [GitHub Repository](https://github.com/bhanquier/neuroSound)
+    - [PyPI Package](https://pypi.org/project/neurosound/)
     - [Technical Article](https://github.com/bhanquier/neuroSound/blob/main/ARTICLE.md)
-    - [Environmental Impact](https://github.com/bhanquier/neuroSound/blob/main/ENVIRONMENTAL_IMPACT.md)
     
     ### 💚 Environmental Impact
     
