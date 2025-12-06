@@ -26,12 +26,33 @@
 
 | Version | Ratio | Vitesse | Énergie | Compatibilité | Recommandation |
 |---------|-------|---------|---------|---------------|----------------|
-| **MP3 Extreme** 🥇 | **5.69x** | **0.086s** | **⚡⚡⚡** | 100% universelle | **PRODUCTION** |
+| **v2.0 Perceptual** 🆕 | **5.80x** | 0.221s | **⚡⚡⚡** | 100% universelle | **Multi-core** |
+| **v1.0 MP3 Extreme** 🥇 | **5.76x** | **0.086s** | **⚡⚡⚡** | 100% universelle | **Single-core** |
 | v3 Lossless | 4.3-9x | 0.20s | ⚡⚡ | Format custom | Archivage |
 | FLAC Simple | 4.78x | ~0.2s | ⚡⚡ | Lecteurs audio | Audiophiles |
 | FLAC standard | 2-4x | 0.01s | ⚡ | Lecteurs audio | Référence |
 
-### ⚡ Pourquoi MP3 Extreme est optimal
+### 🆕 v2.0 Nouveautés
+
+**Modélisation psychoacoustique** :
+- ✅ **Quantification perceptuelle** basée sur courbes Fletcher-Munson
+- ✅ **44.5% réduction énergie** via shaping fréquentiel intelligent
+- ✅ **Analyse adaptative** du contenu (silence/parole/musique)
+- ✅ **Parallélisation multi-core** pour serveurs
+
+**Quand utiliser v2.0** :
+- 🖥️ Serveurs multi-core (10+ cores)
+- 🎵 Traitement batch de grandes bibliothèques
+- 📊 Compression maximale prioritaire
+- 🔬 Applications scientifiques/archivage
+
+**Quand rester sur v1.0** :
+- 📱 Devices mono-core ou mobile
+- ⚡ Latence critique (streaming temps réel)
+- 🔋 Économie CPU prioritaire
+- 🚀 Rapidité > compression
+
+### ⚡ Pourquoi NeuroSound est optimal
 
 **Économie d'énergie** :
 - ✅ **57% moins de CPU** que lossless (0.086s vs 0.20s)
@@ -57,7 +78,10 @@
 ### CLI - Conversion Simple
 
 ```bash
-# MP3 Extreme (recommandé) - compression optimale
+# v2.0 Perceptual (recommandé serveurs multi-core)
+python3 neurosound_v2_perceptual.py  # Encode test_input.wav
+
+# v1.0 MP3 Extreme (recommandé single-core/mobile)
 python3 neurosound_mp3_extreme.py input.wav output.mp3
 
 # Lossless 100% - innovations mathématiques
@@ -65,6 +89,24 @@ python3 neurosound_v3.py
 
 # FLAC amélioré - compatible lecteurs
 python3 neurosound_flac_simple_lossless.py compress music.wav music.flac
+```
+
+### API Python
+
+```python
+# v2.0 - Perceptual + Multi-core
+from neurosound_v2_perceptual import NeuroSoundV2
+from multiprocessing import cpu_count
+
+codec = NeuroSoundV2(cores=cpu_count(), perceptual=True, adaptive=True)
+size, ratio = codec.compress('input.wav', 'output.mp3')
+print(f"Ratio: {ratio:.2f}x")
+
+# v1.0 - MP3 Extreme
+from neurosound_mp3_extreme import NeuroSoundMP3
+
+codec = NeuroSoundMP3(quality='extreme')
+size, ratio = codec.compress('input.wav', 'output.mp3')
 ```
 
 ### Serveur de Streaming 🌊
