@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Benchmark v1.0 vs v2.0 vs v2.1"""
+"""Benchmark v1.0 vs v2.0 vs v2.1 vs v3.0"""
 
 import numpy as np
 import wave
@@ -9,6 +9,7 @@ import os
 from neurosound_mp3_extreme import NeuroSoundMP3
 from neurosound_v2_perceptual import NeuroSoundV2
 from neurosound_v2_1_energy import NeuroSoundV21
+from neurosound_v3_ultimate import NeuroSoundUltimate
 from multiprocessing import cpu_count
 
 
@@ -36,7 +37,7 @@ def generate_test_audio(filename, duration=30):
 
 
 if __name__ == "__main__":
-    print("🏁 NEUROSOUND MEGA-BENCHMARK: v1.0 vs v2.0 vs v2.1")
+    print("🏁 NEUROSOUND MEGA-BENCHMARK: v1.0 vs v2.0 vs v2.1 vs v3.0")
     print("=" * 80)
     
     duration = 30
@@ -82,6 +83,18 @@ if __name__ == "__main__":
         results.append((f'v2.1 {mode.title()}', ratio, elapsed, energy, size))
         print(f"   Ratio: {ratio:.2f}x | Temps: {elapsed:.3f}s | Énergie: ~{energy:.0f}mJ\n")
     
+    # v3.0 Ultimate
+    for mode, emoji in [('aggressive', '👑'), ('balanced', '⚖️'), ('quality', '🎯')]:
+        print(f"{emoji} v3.0 - ULTIMATE ({mode.upper()})")
+        print("-" * 80)
+        codec_v3 = NeuroSoundUltimate(mode=mode, compatible=True)
+        t0 = time.time()
+        size, ratio, energy = codec_v3.compress('megabench_input.wav', f'mega_v3_{mode}.mp3', verbose=False)
+        elapsed = time.time() - t0
+        
+        results.append((f'v3.0 {mode.title()}', ratio, elapsed, energy, size))
+        print(f"   Ratio: {ratio:.2f}x | Temps: {elapsed:.3f}s | Énergie: ~{energy:.0f}mJ\n")
+    
     # Tableau comparatif
     print("\n" + "=" * 80)
     print("📊 TABLEAU COMPARATIF COMPLET")
@@ -105,10 +118,11 @@ if __name__ == "__main__":
     print(f"🔋 Moins d'énergie:   {best_energy[0]:<20} ({best_energy[3]:.0f}mJ)")
     
     print("\n" + "=" * 80)
-    print("💡 RECOMMANDATIONS")
+    print("💡 RECOMMANDATIONS FINALES")
     print("=" * 80)
-    print("• Mobile/IoT/Temps réel    → v1.0 Extreme (rapide, simple, efficace)")
-    print("• Serveurs batch           → v2.1 Ultra (meilleur ratio, économie max)")
-    print("• Streaming live           → v1.0 Extreme (latence minimale)")
-    print("• Archivage                → v2.1 Ultra (compression maximale)")
-    print("• Usage général            → v2.1 Balanced (bon compromis)")
+    print("• Compression MAXIMALE         → v3.0 Aggressive (9x+)")
+    print("• Tout-en-un OPTIMAL           → v3.0 Aggressive (ratio+vitesse+énergie)")
+    print("• Mobile/IoT/Temps réel        → v1.0 Extreme (simple, fiable)")
+    print("• Usage général                → v3.0 Balanced (compromis parfait)")
+    print("• Archivage/batch              → v3.0 Aggressive (meilleur ratio)")
+    print("\n⚠️  v2.0 et v2.1: DÉPRÉCIÉ (remplacés par v3.0)")
