@@ -4,6 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![CI](https://github.com/bhanquier/neuroSound/actions/workflows/ci.yml/badge.svg)](https://github.com/bhanquier/neuroSound/actions/workflows/ci.yml)
 [![Energy Efficient](https://img.shields.io/badge/energy-77%25%20saved-green.svg)](ENVIRONMENTAL_IMPACT.md)
 [![CO2](https://img.shields.io/badge/CO2-8M%20tons%20saved-brightgreen.svg)](ENVIRONMENTAL_IMPACT.md)
 
