@@ -22,7 +22,7 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
-    "Topic :: Multimedia :: Sound/Audio :: Compression",
+    "Topic :: Multimedia :: Sound/Audio",
     "Topic :: Scientific/Engineering :: Artificial Intelligence",
 ]
 keywords = ["audio", "compression", "mp3", "energy-efficient", "spectral-analysis", "green-ai"]
