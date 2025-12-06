@@ -54,16 +54,53 @@
 
 ## 🚀 Utilisation
 
-```bash
-# VERSION RECOMMANDÉE - MP3 Extreme (optimal énergie + compatibilité)
-python3 neurosound_mp3_extreme.py
+### CLI - Conversion Simple
 
-# Lossless 100% - v3 avec innovations mathématiques
+```bash
+# MP3 Extreme (recommandé) - compression optimale
+python3 neurosound_mp3_extreme.py input.wav output.mp3
+
+# Lossless 100% - innovations mathématiques
 python3 neurosound_v3.py
 
-# Lossless compatible - FLAC amélioré
+# FLAC amélioré - compatible lecteurs
 python3 neurosound_flac_simple_lossless.py compress music.wav music.flac
 ```
+
+### Serveur de Streaming 🌊
+
+**Streaming HTTP avec support HLS/DASH** :
+
+```bash
+# Démarrer le serveur
+python3 neurosound_streaming.py --port 8080 --library ./music
+
+# Ouvrir dans le navigateur
+open http://localhost:8080
+```
+
+**Features** :
+- ✅ **HTTP Range requests** - Seek instantané dans les fichiers
+- ✅ **Multi-bitrate ABR** - 5 qualités (96-245 kbps)
+- ✅ **HLS playlists** - Compatible lecteurs modernes
+- ✅ **Cache intelligent LRU** - 500MB par défaut
+- ✅ **API REST** - Intégration facile
+- ✅ **Player web** - Interface incluse
+
+**Endpoints** :
+```bash
+GET /                           # Player web interactif
+GET /stream/song.mp3?quality=extreme  # Stream direct avec cache
+GET /playlist.m3u8?song=file    # HLS playlist multi-bitrate
+GET /api/library                # Liste des fichiers disponibles
+GET /api/stats                  # Statistiques serveur temps réel
+```
+
+**Idéal pour** :
+- Serveurs de streaming personnels (Spotify-like)
+- Applications mobiles/web
+- Systèmes embarqués / IoT
+- Tests de charge / benchmarks
 
 ## 💡 Technologies
 
@@ -89,6 +126,7 @@ python3 neurosound_flac_simple_lossless.py compress music.wav music.flac
 ## 📁 Fichiers
 
 - `neurosound_mp3_extreme.py` - **⚡ RECOMMANDÉ** (optimal énergie/performance)
+- `neurosound_streaming.py` - **🌊 SERVEUR STREAMING** (HTTP/HLS/ABR)
 - `neurosound_v3.py` - Innovations lossless (archivage)
 - `neurosound_flac_simple_lossless.py` - FLAC amélioré (audiophiles)
 
