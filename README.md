@@ -26,33 +26,33 @@
 
 | Version | Ratio | Vitesse | Énergie | Compatibilité | Recommandation |
 |---------|-------|---------|---------|---------------|----------------|
-| **v2.0 Perceptual** 🆕 | **5.80x** | 0.221s | **⚡⚡⚡** | 100% universelle | **Multi-core** |
-| **v1.0 MP3 Extreme** 🥇 | **5.76x** | **0.086s** | **⚡⚡⚡** | 100% universelle | **Single-core** |
+| **v2.1 Ultra** 👑 | **7.62x** | **0.104s** | **⚡⚡⚡⚡** | 100% universelle | **OPTIMAL** |
+| v2.1 Balanced | 6.82x | 0.137s | ⚡⚡⚡ | 100% universelle | Compromis |
+| v1.0 MP3 Extreme | 5.70x | 0.157s | ⚡⚡⚡ | 100% universelle | Temps réel |
+| v2.0 Perceptual | 5.76x | 0.217s | ⚡ | 100% universelle | Déprécié |
 | v3 Lossless | 4.3-9x | 0.20s | ⚡⚡ | Format custom | Archivage |
-| FLAC Simple | 4.78x | ~0.2s | ⚡⚡ | Lecteurs audio | Audiophiles |
 | FLAC standard | 2-4x | 0.01s | ⚡ | Lecteurs audio | Référence |
 
-### 🆕 v2.0 Nouveautés
+### 👑 v2.1 Ultra - Triple Champion
 
-**Modélisation psychoacoustique** :
-- ✅ **Quantification perceptuelle** basée sur courbes Fletcher-Munson
-- ✅ **44.5% réduction énergie** via shaping fréquentiel intelligent
-- ✅ **Analyse adaptative** du contenu (silence/parole/musique)
-- ✅ **Parallélisation multi-core** pour serveurs
+**Performance absolue** :
+- ✅ **7.62x compression** (+34% vs v1.0, +32% vs v2.0)
+- ✅ **0.104s** (1.5x plus rapide que v1.0, 2x que v2.0)
+- ✅ **36mJ énergie** (23% moins que v1.0, **91% moins que v2.0**)
+- ✅ **100% compatible MP3** (lecture universelle)
 
-**Quand utiliser v2.0** :
-- 🖥️ Serveurs multi-core (10+ cores)
-- 🎵 Traitement batch de grandes bibliothèques
-- 📊 Compression maximale prioritaire
-- 🔬 Applications scientifiques/archivage
+**Innovations clés** :
+- 🧠 **Détection contenu sans FFT** (zero-crossing rate ultra-rapide)
+- 🔧 **DC offset removal** (économise bits d'encodage)
+- 🎯 **VBR adaptatif** (V2 pour musique = meilleur ratio que V0)
+- ⚡ **Single-pass** (pas de multi-core overhead)
+- 📉 **Pre-processing minimal** (LAME fait déjà le reste)
 
-**Quand rester sur v1.0** :
-- 📱 Devices mono-core ou mobile
-- ⚡ Latence critique (streaming temps réel)
-- 🔋 Économie CPU prioritaire
-- 🚀 Rapidité > compression
-
-### ⚡ Pourquoi NeuroSound est optimal
+**Quand utiliser chaque version** :
+- 👑 **v2.1 Ultra** : Serveurs batch, archivage, compression maximale
+- ⚖️ **v2.1 Balanced** : Usage général, bon compromis
+- 🚀 **v1.0 Extreme** : Mobile, IoT, streaming temps réel (latence critique)
+- ❌ **v2.0** : Déprécié (remplacé par v2.1)
 
 **Économie d'énergie** :
 - ✅ **57% moins de CPU** que lossless (0.086s vs 0.20s)
@@ -78,33 +78,35 @@
 ### CLI - Conversion Simple
 
 ```bash
-# v2.0 Perceptual (recommandé serveurs multi-core)
-python3 neurosound_v2_perceptual.py  # Encode test_input.wav
+# v2.1 Ultra (RECOMMANDÉ - champion absolu)
+python3 neurosound_v2_1_energy.py  # Mode ultra par défaut
 
-# v1.0 MP3 Extreme (recommandé single-core/mobile)
+# v1.0 MP3 Extreme (streaming temps réel)
 python3 neurosound_mp3_extreme.py input.wav output.mp3
 
 # Lossless 100% - innovations mathématiques
 python3 neurosound_v3.py
-
-# FLAC amélioré - compatible lecteurs
-python3 neurosound_flac_simple_lossless.py compress music.wav music.flac
 ```
 
 ### API Python
 
 ```python
-# v2.0 - Perceptual + Multi-core
-from neurosound_v2_perceptual import NeuroSoundV2
-from multiprocessing import cpu_count
+# v2.1 - Energy Optimized (RECOMMANDÉ)
+from neurosound_v2_1_energy import NeuroSoundV21
 
-codec = NeuroSoundV2(cores=cpu_count(), perceptual=True, adaptive=True)
-size, ratio = codec.compress('input.wav', 'output.mp3')
-print(f"Ratio: {ratio:.2f}x")
+# Mode ultra: max compression + min énergie
+codec = NeuroSoundV21(energy_mode='ultra')
+size, ratio, energy = codec.compress('input.wav', 'output.mp3')
+print(f"Ratio: {ratio:.2f}x, Énergie: {energy:.0f}mJ")
 
-# v1.0 - MP3 Extreme
+# Mode balanced: bon compromis
+codec = NeuroSoundV21(energy_mode='balanced')
+
+# Mode quality: privilégie qualité
+codec = NeuroSoundV21(energy_mode='quality')
+
+# v1.0 - MP3 Extreme (temps réel)
 from neurosound_mp3_extreme import NeuroSoundMP3
-
 codec = NeuroSoundMP3(quality='extreme')
 size, ratio = codec.compress('input.wav', 'output.mp3')
 ```
