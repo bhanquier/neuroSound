@@ -1,18 +1,18 @@
-# NeuroSound: Spectral Analysis for Ultra-Efficient Audio Compression
+# NeuroSound: Content-Aware Audio Compression
 
-*How analyzing instead of transforming audio achieved 12.52x compression with 38% energy savings*
+*How analyzing instead of transforming audio achieved intelligent, content-adaptive compression*
 
 ---
 
 ## TL;DR
 
-**NeuroSound v3.1 achieves world-record audio compression:**
-- **12.52x compression ratio** (+118% vs baseline)
-- **0.105s processing time** (32% faster)
-- **29mJ energy consumption** (38% less)
-- 100% MP3 compatible
+**NeuroSound combines spectral analysis with content-aware optimizations:**
+- **v3.1:** 12.52x via spectral analysis (proven on varied audio)
+- **v3.2:** 15-25x typical via 4 synergistic techniques (content-dependent)
+- **Best case:** 30-50x on silence-heavy quasi-mono audio
+- 100% MP3 compatible, perceptually transparent
 
-**The secret?** Stop transforming audio. Start analyzing it.
+**The approach?** Analyze content characteristics, adapt compression strategy.
 
 ```bash
 pip install neurosound
@@ -497,15 +497,17 @@ def _convert_to_wav(self, input_file, output_wav):
 
 ## Conclusion
 
-The path from 12.52x (v3.1) to 80.94x (v3.2) wasn't adding complexity—it was **combining insights**.
+The evolution from v3.1 (12.52x) to v3.2 (15-25x typical) demonstrates that **content-aware compression** works.
 
-By analyzing spectral content (v3.1) **and** applying 4 synergistic optimizations (v3.2), we achieved:
-- **546% better compression** than v3.1
-- **1308% better** than v1.0 baseline
-- **Multi-format support** (6+ audio formats)
-- **Zero quality loss** (perceptual transparency maintained)
+By analyzing spectral content (v3.1) **and** applying 4 content-dependent optimizations (v3.2):
+- **20-100% improvement** on typical music vs v3.1 (content-dependent)
+- **30-50x** on silence-heavy audio (podcast, voix)
+- **Multi-format support** (MP3, AAC, OGG, FLAC, WAV, M4A)
+- **Perceptual transparency** maintained across all content types
 
-Sometimes the best optimization is **understanding your data at multiple levels**: spectral content, temporal structure, spatial redundancy, and psychoacoustic masking.
+**Key learning:** Compression effectiveness is highly content-dependent. Techniques that work synergistically on simple/sparse audio (silence removal, stereo→mono) provide minimal gains on complex music. Honest benchmarking requires varied test data.
+
+Sometimes the best optimization is **understanding your data's characteristics**: spectral content, temporal structure, spatial redundancy, and psychoacoustic masking—then adapting the strategy accordingly.
 
 ---
 

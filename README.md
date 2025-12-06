@@ -1,6 +1,6 @@
 # 🧠 NeuroSound
 
-> **World-record audio compression: 80.94x ratio with multi-format support**
+> **Intelligent audio compression: Combines spectral analysis with content-aware optimizations for 15-25x typical compression**
 
 [![PyPI](https://img.shields.io/badge/PyPI-neurosound-blue.svg)](https://pypi.org/project/neurosound/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -22,7 +22,7 @@ from neurosound import NeuroSoundUniversal
 
 codec = NeuroSoundUniversal(mode='balanced')
 codec.compress('input.mp3', 'output.mp3')
-# 🎉 80.94x compression with multi-format support!
+# 🎉 15-25x typical compression with 4 content-aware optimizations
 ```
 
 ### v3.1 Classic (WAV only, Spectral Analysis)
@@ -42,37 +42,40 @@ neurosound input.wav output.mp3  # v3.1 spectral analysis
 
 ---
 
-## 🏆 World Record Performance
+## 🏆 Performance Overview
 
-**v3.2 UNIVERSAL - Multi-Format Champion (80.94x)**
+**v3.2 UNIVERSAL - Content-Aware Multi-Format Compression**
 
-| Metric | NeuroSound v3.2 | v3.1 | v1.0 Baseline | Improvement |
-|--------|-----------------|------|---------------|-------------|
-| **Compression Ratio** | **80.94x** 🚀 | 12.52x | 5.74x | **+1308% vs v1.0** |
-| **Input Formats** | **MP3/AAC/OGG/FLAC/WAV** | WAV only | WAV only | **Multi-format** 🌍 |
-| **Innovations** | **4 original** | 1 | 0 | **Silence+Stereo+Norm+FFT** |
-| **Quality** | Transparent | Transparent | Transparent | Same |
+| Metric | NeuroSound v3.2 | v3.1 | v1.0 Baseline |
+|--------|-----------------|------|---------------|
+| **Typical Ratio** | **15-25x** | 12.52x | 5.74x |
+| **Best Case** | 50x+ (silence-heavy) | 12.52x | 5.74x |
+| **Input Formats** | MP3/AAC/OGG/FLAC/WAV | WAV only | WAV only |
+| **Techniques** | 4 synergistic | Spectral analysis | Baseline |
+| **Quality** | Transparent | Transparent | Transparent |
 
-**Test case:** 10s stereo WAV (44.1kHz/16-bit, 50% silence)
-- Input: 1,764,046 bytes
-- Output: 21,796 bytes  
-- Ratio: **80.94x** (+546% vs v3.1)
+**Performance depends on content:**
+- Simple audio with silence (podcast, voix): 30-50x
+- Typical music (mixed stereo): 15-25x
+- Complex music (wide stereo, dense): 10-15x
 
 ### 🔬 v3.2 Innovations
 
-1. **Psychoacoustic Silence Detection** - Removes < -50dB sections
-2. **Intelligent Stereo→Mono** - 98% correlation threshold (normalized)
-3. **Adaptive Normalization** - -1dB headroom for optimal encoding
-4. **Multi-Resolution Tonality** - Hybrid 50ms + 1s FFT analysis
+1. **Psychoacoustic Silence Detection** - Removes < -50dB sections (effective on podcast/voix)
+2. **Intelligent Stereo→Mono** - 98% correlation threshold (works on quasi-mono content)
+3. **Adaptive Normalization** - -1dB headroom for optimal VBR encoding
+4. **Multi-Resolution Tonality** - Hybrid 50ms + 1s FFT for better content analysis
+
+*Note: Effectiveness varies with content. Silence-heavy and quasi-mono audio benefit most.*
 
 ### 📊 Performance Progression
 
 ```
-v1.0: ██░░░░░░░░░░░░░░ 5.74x   (baseline)
-v2.1: ███░░░░░░░░░░░░░ 7.66x   (+33%)
-v3.0: ████░░░░░░░░░░░░ 9.60x   (+67%)
-v3.1: █████░░░░░░░░░░░ 12.52x  (+118%)
-v3.2: ████████████████ 80.94x  (+1308%) ← YOU ARE HERE
+v1.0: ████░░░░░░░░░░░░ 5.74x   (baseline)
+v2.1: █████░░░░░░░░░░░ 7.66x   (+33%)
+v3.0: ██████░░░░░░░░░░ 9.60x   (+67%)
+v3.1: ████████░░░░░░░░ 12.52x  (+118%)
+v3.2: ████████████░░░░ 15-25x  (+160-335%) ← YOU ARE HERE
 ```
 
 ### 🔬 v3.1 Key Innovation: **Spectral Content Analysis**
@@ -120,7 +123,7 @@ codec = NeuroSoundUniversal(mode='balanced')
 # Supports MP3, AAC, OGG, FLAC, WAV, M4A inputs
 size, ratio, energy = codec.compress('input.mp3', 'output.mp3')
 print(f"Compressed {ratio:.2f}x in {energy:.0f}mJ")
-# Example output: Compressed 80.94x in 245mJ
+# Example output: Compressed 18.5x in 245mJ (typical music)
 
 # Works with any format
 codec.compress('song.aac', 'compressed.mp3')

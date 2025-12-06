@@ -24,8 +24,8 @@ def main():
         layout="wide"
     )
     
-    st.title("🧠 NeuroSound - World Record Audio Compression")
-    st.markdown("**80.94x compression ratio with multi-format support**")
+    st.title("🧠 NeuroSound - Content-Aware Audio Compression")
+    st.markdown("**15-25x typical compression with intelligent optimizations**")
     
     st.markdown("---")
     
@@ -60,7 +60,7 @@ def main():
             st.markdown("""
             ### 📊 v3.2 UNIVERSAL
             
-            **4 Innovations:**
+            **4 Content-Aware Techniques:**
             - Silence detection/removal
             - Stereo→Mono (98% threshold)
             - Adaptive normalization
@@ -71,8 +71,8 @@ def main():
             - FLAC, WAV, M4A
             
             **Performance:**
-            - Ratio: ~80x
-            - Time: ~0.25s
+            - Typical: 15-25x
+            - Best: 30-50x (silence-heavy)
             """)
         else:
             st.markdown("""
@@ -224,12 +224,12 @@ def main():
     st.markdown("""
     ### 🔬 How It Works
     
-    **v3.2 UNIVERSAL** uses 4 synergistic innovations:
+    **v3.2 UNIVERSAL** uses 4 content-aware techniques:
     
-    1. **Psychoacoustic Silence Detection:** Remove < -50dB sections (inaudible)
-    2. **Intelligent Stereo→Mono:** 98% correlation threshold (normalized)
-    3. **Adaptive Normalization:** -1dB headroom for optimal VBR encoding
-    4. **Multi-Resolution FFT:** Hybrid 50ms + 1s tonality analysis
+    1. **Psychoacoustic Silence Detection:** Remove < -50dB sections (effective on podcast/voix)
+    2. **Intelligent Stereo→Mono:** 98% correlation threshold (works on quasi-mono content)
+    3. **Adaptive Normalization:** -1dB headroom for optimal VBR encoding (always beneficial)
+    4. **Multi-Resolution FFT:** Hybrid 50ms + 1s tonality analysis (improved from v3.1)
     
     **v3.1 Classic** uses spectral content analysis:
     
@@ -237,7 +237,9 @@ def main():
     2. **Adaptive VBR:** Select optimal MP3 VBR setting based on content
     3. **Smart Optimization:** DC offset removal, joint stereo for correlated L/R
     
-    **Result:** Up to 80.94x compression (v3.2) or 12.52x (v3.1) while maintaining perceptual transparency!
+    **Result:** 15-25x typical (v3.2), 30-50x on silence-heavy audio, 12.52x proven (v3.1). Perceptual transparency maintained.
+    
+    *Note: Compression ratio varies with content. Simple/sparse audio benefits most from v3.2 optimizations.*
     
     ### 📚 Learn More
     

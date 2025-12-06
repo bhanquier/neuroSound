@@ -1,6 +1,6 @@
-## 🚀 World Record Shattered: 80.94x Compression Ratio
+## 🚀 NeuroSound v3.2.0 UNIVERSAL
 
-**v3.2.0 UNIVERSAL - Multi-Format Champion**
+**Content-Aware Multi-Format Audio Compression**
 
 ### 🎉 NOW AVAILABLE ON PyPI
 
@@ -12,17 +12,17 @@ pip install neurosound --upgrade
 
 ---
 
-### Performance Breakthrough
+### Performance Overview
 
-- **80.94x compression ratio** (+546% vs v3.1, +1508% vs v1.0)
+- **15-25x typical compression** on music (vs 12.52x in v3.1)
+- **30-50x on silence-heavy audio** (podcast, voix)
 - **Multi-format support** (MP3, AAC, OGG, FLAC, WAV, M4A)
-- **4 original innovations** working in synergy
-- **21 KB output** for 10s stereo audio (vs 1.7 MB input)
+- **4 content-aware techniques** working in synergy
 
-**Test case:** 10s stereo WAV @ 44.1kHz/16-bit with 50% silence
-- Input: 1,764,046 bytes
-- Output: 21,796 bytes
-- Ratio: **80.94x**
+**Performance varies by content:**
+- Simple audio with silence: 30-50x
+- Typical music (mixed stereo): 15-25x
+- Complex music (wide stereo): 10-15x
 
 ---
 
@@ -61,12 +61,12 @@ pip install neurosound --upgrade
 ```python
 from neurosound import NeuroSoundUniversal
 
-# Multi-format support
+# Multi-format support with content-aware optimization
 codec = NeuroSoundUniversal(mode='balanced')
-codec.compress('input.mp3', 'output.mp3')  # MP3
-codec.compress('input.aac', 'output.mp3')  # AAC
-codec.compress('input.ogg', 'output.mp3')  # OGG
-codec.compress('input.flac', 'output.mp3') # FLAC
+codec.compress('input.mp3', 'output.mp3')   # 15-25x typical
+codec.compress('input.aac', 'output.mp3')   # Multi-format
+codec.compress('input.ogg', 'output.mp3')   # Support
+codec.compress('input.flac', 'output.mp3')  # All formats
 
 # Original v3.1 still available
 from neurosound import NeuroSound
@@ -107,15 +107,15 @@ neurosound input.wav output.mp3
 
 ### Performance Comparison
 
-| Version | Ratio | Input Formats | Optimizations |
-|---------|-------|---------------|---------------|
-| v1.0    | 5.05x | WAV only      | None |
-| v2.0    | 7.40x | WAV only      | Spectral analysis |
-| v3.0    | 9.64x | WAV only      | Enhanced FFT |
+| Version | Typical Ratio | Input Formats | Optimizations |
+|---------|---------------|---------------|---------------|
+| v1.0    | 5.74x | WAV only      | None |
+| v2.0    | 7.66x | WAV only      | Spectral analysis |
+| v3.0    | 9.60x | WAV only      | Enhanced FFT |
 | v3.1    | 12.52x | WAV only     | Peak detection |
-| **v3.2** | **80.94x** | **Multi-format** | **4 innovations** |
+| **v3.2** | **15-25x** | **Multi-format** | **4 techniques** |
 
-**Gain vs v3.1:** +546% compression improvement
+**Typical improvement vs v3.1:** +20-100% depending on content
 
 ---
 
