@@ -2,6 +2,8 @@
 
 **Content-Aware Multi-Format Audio Compression**
 
+*Research/educational project optimized for podcast, speech, and classical music archiving*
+
 ### 🎉 NOW AVAILABLE ON PyPI
 
 ```bash

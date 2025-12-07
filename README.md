@@ -1,6 +1,7 @@
 # 🧠 NeuroSound
 
-> **Intelligent audio compression: Combines spectral analysis with content-aware optimizations for 15-25x typical compression**
+> **Content-aware audio compression for archiving and research**
+> Optimized for podcast, speech, and classical music (23-25x). Educational R&D project demonstrating intelligent preprocessing for MP3 VBR.
 
 [![PyPI](https://img.shields.io/badge/PyPI-neurosound-blue.svg)](https://pypi.org/project/neurosound/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -78,7 +79,27 @@ neurosound input.wav output.mp3  # v3.1 spectral analysis
 3. **Adaptive Normalization** - -1dB headroom for optimal VBR encoding
 4. **Multi-Resolution Tonality** - Hybrid 50ms + 1s FFT for better content analysis
 
-*Note: Effectiveness varies with content. Silence-heavy and quasi-mono audio benefit most.*
+*Note: Effectiveness varies with content. Silence-heavy and quasi-mono audio benefit most. Dense modern music sees ~10% improvement over standard MP3 VBR.*
+
+---
+
+## ⚠️ Technical Scope & Limitations
+
+**What this project is:**
+- 🎓 Educational demonstration of content-aware audio optimization
+- 🔬 R&D exploration of intelligent preprocessing for lossy codecs
+- 📦 Practical tool for specific archiving use cases (podcast, classical)
+
+**What this project is NOT:**
+- ❌ General-purpose codec replacement for all audio types
+- ❌ Better than Opus/AAC for streaming music
+- ❌ Professional-grade lossless compression
+- ❌ Suitable for real-time/low-latency applications
+
+**Performance reality:**
+- Podcast/classical: 2-3x better than standard MP3 VBR
+- Dense modern music: ~10% improvement (marginal)
+- Already-compressed audio: Minimal to no benefit
 
 ### 📊 Performance Progression
 

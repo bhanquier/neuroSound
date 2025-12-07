@@ -14,6 +14,8 @@
 
 **Benchmark results (WAV sources):** Pure tone 44x, Classical 25x, Simple music 23x, Complex music 12x
 
+**Project scope:** Educational R&D demonstrating content-aware preprocessing. Best suited for archiving podcast, speech, and classical music where it provides 2-3x improvement over standard MP3 VBR. Not designed to replace modern streaming codecs (AAC, Opus) for dense music production.
+
 **The approach?** Analyze content characteristics, adapt compression strategy.
 
 ```bash
