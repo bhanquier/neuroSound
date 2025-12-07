@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+<meta charset="utf-8"/>
+<title>SampleSwap: 404 Page Not Found</title>
+<meta content="Page Not Found" name="description"/>
+<meta content="" name="author"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta name="google-translate-customization" content="56555486852fbb92-aeab51857b47ae53-gad55f96df281dd05-e"></meta>
+<meta property="og:image" content="https://sampleswap.org/images/facebook-og.png" />
+<!-- BEGIN GLOBAL MANDATORY STYLES -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css">
+<link href="/assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="/assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css">
+<link href="/assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="/assets/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css">
+
+<!-- END GLOBAL MANDATORY STYLES -->
+<!-- BEGIN THEME STYLES -->
+<link href="/assets/global/css/components.css" rel="stylesheet" type="text/css">
+<link href="/assets/global/css/plugins.css" rel="stylesheet" type="text/css">
+<link href="/assets/admin/layout3/css/layout.css" rel="stylesheet" type="text/css">
+<link href="/css/sampleswap.css" rel="stylesheet" type="text/css">
+<!-- END THEME STYLES -->
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link rel="stylesheet" type="text/css" href="/js/soundmanager/demo/flashblock/flashblock.css" />
+
+<script type="text/javascript" src="/js/soundmanager/script/soundmanager2.js"></script>
+
+</head>
+<body>
+<!-- BEGIN HEADER -->
+<div class="page-header">
+	<!-- BEGIN HEADER TOP -->
+	<div class="page-header-top">
+		<div class="container">
+			<!-- BEGIN LOGO -->
+			<div class="page-logo">
+				<a href="/index.php"><img src="/images/sampleswap-logo.png" alt="SampleSwap" class="logo-default" height="44" width="150"></a>
+			</div>
+                                    
+            
+			<!-- END LOGO -->
+			<!-- BEGIN RESPONSIVE MENU TOGGLER -->
+			<a href="javascript:;" class="menu-toggler"></a>
+			<!-- END RESPONSIVE MENU TOGGLER -->
+			<!-- BEGIN TOP NAVIGATION MENU -->
+			<div class="top-menu">
+            	                      <p class="navbar-text pull-right">You must <a href="/login.php">login</a> or <a href="/login.php?mode=register">register</a> to download samples.</p>
+				                
+			</div>
+			<!-- END TOP NAVIGATION MENU -->
+		</div>
+	</div>
+	<!-- END HEADER TOP -->
+	<!-- BEGIN HEADER MENU -->
+	<div class="page-header-menu">
+		<div class="container">
+			<!-- BEGIN HEADER SEARCH BOX -->
+			<form class="search-form" action="/filebrowser-new.php" method="GET">
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="Search Samples" name="q">
+					<span class="input-group-btn">
+					<a href="javascript:;" class="btn submit"><i class="icon-magnifier"></i></a>
+					</span>
+				</div>
+			</form>
+			<!-- END HEADER SEARCH BOX -->
+			<!-- BEGIN MEGA MENU -->
+			<!-- DOC: Apply "hor-menu-light" class after the "hor-menu" class below to have a horizontal menu with white background -->
+			<!-- DOC: Remove data-hover="dropdown" and data-close-others="true" attributes below to disable the dropdown opening on mouse hover -->
+			<div class="hor-menu ">
+				<ul class="nav navbar-nav">
+					<li  >
+						<a href="/"><i class="fa fa-home"></i></a>
+					</li>
+                   
+
+					<li class="menu-dropdown mega-menu-dropdown ">
+						<a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="javascript:;" class="dropdown-toggle">
+						<strong>Sample Library</strong> <span style="color:#999999; font-size: 75%;">9.4 GB </span> <i class="fa fa-microphone"></i>
+						</a>
+						<ul class="dropdown-menu" style="min-width: 710px">
+							<li>
+								<div class="mega-menu-content">
+									<div class="row">
+                                    
+										<div class="col-md-4">
+											<ul class="mega-menu-submenu">
+												<li>
+                                                    <a href="/filebrowser-new.php"><button class="btn orange btn-block">Browse All Sounds <i class="fa fa-mail-forward"></i></button></a>
+												</li>
+
+												
+	                                                <li><small>100% of these samples are free. <a href="/donate/index.php"><strong style="color: #EA9E26;">You can also download the entire collection at once.</strong></a></small></li> 
+
+												
+                                                <li>
+													<a href="/filebrowser-new.php?d=DRUM+LOOPS+and+BREAKS%2F" class="iconify">
+													<i class="icon-folder"></i>
+													Drum Loops </a>
+												</li>
+
+												<li>
+													<a href="/filebrowser-new.php?d=DRUMS+and+SINGLE+HITS%2F" class="iconify">
+													<i class="icon-folder"></i>
+													Drum Hits </a>
+												</li>
+
+												<li>
+													<a href="/filebrowser-new.php?d=DRUMS+%28FULL+KITS%29%2F" class="iconify">
+													<i class="icon-folder"></i>
+													Complete Drum Kits </a>
+												</li>
+                                                
+                                                <li>
+													<a href="/filebrowser-new.php?d=MELODIC+SAMPLES+and+LOOPS%2F" class="iconify">
+													<i class="icon-folder"></i>
+													Melodic / Musical Loops </a>
+												</li>
+
+												<li>
+													<a href="/filebrowser-new.php?d=VOCALS+and+SPOKEN+WORD%2F" class="iconify">
+													<i class="icon-folder"></i>
+													Speech / Vocal / Acapella </a>
+												</li>
+                                                
+												<li>
+													<a href="/filebrowser-new.php?d=INSTRUMENTS+single+samples%2F" class="iconify">
+													<i class="icon-folder"></i>
+													Instruments / Tonal Hits </a>
+												</li>
+												<li>
+													<a href="/filebrowser-new.php?d=REMIXABLE+COLLECTIONS%2F" class="iconify">
+													<i class="icon-folder"></i>
+													Remixable Collections </a>
+												</li>
+												<li>
+													<a href="/filebrowser-new.php?d=SFX+and+UNUSUAL+SOUNDS%2F" class="iconify">
+													<i class="icon-folder"></i>
+													Sounds / Effects / etc. </a>
+												</li>
+											</ul>
+										</div>
+                                        
+                                        
+										<div class="col-md-4">
+											<ul class="mega-menu-submenu">
+												<li>
+													<a href="/filebrowser-new.php?d=MELODIC+SAMPLES+and+LOOPS%2FSYNTH+AND+ELECTRONIC+BPM%2F" class="iconify">
+													<i class="icon-pin"></i>
+													Synth / Arpeggio Loops </a>
+												</li>
+												<li>
+													<a href="/filebrowser-new.php?d=MELODIC+SAMPLES+and+LOOPS%2FBASS+BPM%2F" class="iconify">
+													<i class="icon-pin"></i>
+													Bassline Loops</a>
+												</li>
+												<li>
+													<a href="/filebrowser-new.php?d=MELODIC+SAMPLES+and+LOOPS%2FGUITARS+BPM%2F" class="iconify">
+													<i class="icon-pin"></i>
+													Guitar Loops </a>
+												</li>
+												<li>
+													<a href="/filebrowser-new.php?d=MELODIC+SAMPLES+and+LOOPS%2FFULL+ENSEMBLE+BPM%2F" class="iconify">
+													<i class="icon-pin"></i>
+													Loops from Songs</a>
+												</li>
+
+												<li>
+													<a href="/filebrowser-new.php?d=MELODIC+SAMPLES+and+LOOPS%2Fethno%2F" class="iconify">
+													<i class="icon-pin"></i>
+													Exotic / Foreign Loops</a>
+												</li>
+
+												<li>
+													<a href="/filebrowser-new.php?d=LOOPING+AMBIENCE+and+NOISE%2F" class="iconify">
+													<i class="icon-pin"></i>
+													Looping Ambience</a>
+												</li>
+
+												<li>
+													<a href="/filebrowser-new.php?d=SFX+and+UNUSUAL+SOUNDS%2FATMOSPHERICS%2F" class="iconify">
+													<i class="icon-pin"></i>
+													Atmospherics</a>
+												</li>
+
+												<li>
+													<a href="/filebrowser-new.php?d=PUBLIC+DOMAIN+MUSIC%2F" class="iconify">
+													<i class="icon-pin"></i>
+													Vintage Music</a>
+												</li>
+
+												<li>
+													<a href="/filebrowser-new.php?d=PUBLIC+DOMAIN+SPOKEN+WORD%2F" class="iconify">
+													<i class="icon-pin"></i>
+													Vintage Spoken Word</a>
+												</li>
+
+												<li>
+													<a href="/filebrowser-new.php?d=SFX+and+UNUSUAL+SOUNDS%2FVIDEO+GAMES%2F" class="iconify">
+													<i class="icon-pin"></i>
+													Vintage Video Games</a>
+												</li>
+
+												<li>
+													<a href="/filebrowser-new.php?d=SFX+and+UNUSUAL+SOUNDS%2FELECTRO+and+SYNTHETIC%2F" class="iconify">
+													<i class="icon-pin"></i>
+													Electro FX</a>
+												</li>
+
+												<li>
+													<a href="/filebrowser-new.php?d=SFX+and+UNUSUAL+SOUNDS%2FVARIOUS%2F" class="iconify">
+													<i class="icon-pin"></i>
+													Various Intense FX</a>
+												</li>
+											</ul>
+										</div>
+                                        
+                                        
+										<div class="col-md-4">
+											<ul class="mega-menu-submenu">
+												<li>
+													<a href="/filebrowser-new.php?q=female+vocal" class="iconify">
+													<i class="fa fa-search"></i>
+													Female Vocal </a>
+												</li>
+
+												<li>
+													<a href="/filebrowser-new.php?q=male+vocal" class="iconify">
+													<i class="fa fa-search"></i>
+													Male Vocal </a>
+												</li>
+												<li>
+													<a href="/filebrowser-new.php?q=weird+funny+crazy+strange" class="iconify">
+													<i class="fa fa-search"></i>
+													Weird / Strange </a>
+												</li>
+												<li>
+													<a href="/filebrowser-new.php?q=dirt+noise+grime+hiss" class="iconify">
+													<i class="fa fa-search"></i>
+													Noisy / Dirty </a>
+												</li>
+												<li>
+													<a href="/filebrowser-new.php?q=happy+beaut+pretty" class="iconify">
+													<i class="fa fa-search"></i>
+													Happy / Pretty </a>
+												</li>
+												<li>
+													<a href="/filebrowser-new.php?q=jazz" class="iconify">
+													<i class="fa fa-search"></i>
+													Jazzy </a>
+												</li>
+												<li>
+													<a href="/filebrowser-new.php?q=funk" class="iconify">
+													<i class="fa fa-search"></i>
+													Funky </a>
+												</li>
+												<li>
+													<a href="/filebrowser-new.php?q=loop" class="iconify">
+													<i class="fa fa-search"></i>
+													Loops of All Sorts </a>
+												</li>
+												
+												<li><hr></li>
+
+	                                                <li><small style="padding-bottom: 10px;">Help keep this collection fresh! For the past 20 years, this library has been built up one sample at a time by people just like you.</small></li> 
+
+												<li>
+                                                    <a href="/contribute/index.php"><button class="btn green btn-block">Contribute Your Samples <i class="fa fa-upload"></i></button></a>
+                                                </li>
+
+
+											</ul>
+										</div>
+                                        
+                                        
+                                        
+									</div>
+								</div>
+							</li>
+						</ul>
+					</li><!-- eof samples menu -->
+
+
+
+
+					<li class="menu-dropdown mega-menu-dropdown ">
+						<a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="javascript:;" class="dropdown-toggle">
+						Royalty Free Music <span style="color:#999999; font-size: 75%;">2,042 Songs</span> <i class="fa fa-music"></i>
+						</a>
+						<ul class="dropdown-menu" style="min-width: 710px">
+							<li>
+								<div class="mega-menu-content">
+									<div class="row">
+                                    
+										<div class="col-md-4">
+											<ul class="mega-menu-submenu">
+												<li>
+                                                    <a href="/mp3/creative-commons/free-music.php"><button class="btn orange btn-block">Listen to Music <i class="fa fa-mail-forward"></i></button></a>
+												</li>
+												<li>
+                                                    <a href="/contribute/upload-song.php"><button class="btn green btn-block">Upload Music <i class="fa fa-upload"></i></button></a>
+                                                </li>
+                                                <li><small>All of the music on this site may be downloaded for free. Each track has an accompanying license which describes whether it may be remixed, used in commercial productions, etc.</small></li> 
+                                                <li><small><strong><a href="/mp3/creative-commons/10-reasons.php">Why should I upload my music?</a></strong></small></li>
+											</ul>
+										</div>
+                                        
+                                        
+										<div class="col-md-4">
+											<ul class="mega-menu-submenu">
+                                                <li>
+													<a href="/mp3/creative-commons/free-music.php?focus=selections">
+													Really Good Music
+													<em class="fa fa-star"></em>
+													<em class="fa fa-star"></em>
+													<em class="fa fa-star"></em></a>
+												</li>
+                                                <li>
+													<a href="/mp3/creative-commons/free-music.php?focus=favorites">
+													Even Better Music
+													<em class="fa fa-star"></em>
+													<em class="fa fa-star"></em>
+													<em class="fa fa-star"></em>
+													<em class="fa fa-star"></em></a>
+												</li>
+                                                
+                                                <li>
+													<a href="/mp3/creative-commons/free-music.php?focus=selections&onlycommercial=true" class="iconify">
+													<i class="icon-playlist"></i>
+													Music Licensed for Free Commercial Use</a>
+												</li>
+                                                
+                                                <li>
+													<a href="/mp3/creative-commons/free-music.php?focus=selections&onlycommercial=&onlyremixable=true" class="iconify">
+													<i class="icon-playlist"></i>
+													Music Licensed for Remixing</a>
+												</li>
+                                              <li>
+													<a href="/mp3/creative-commons/free-music.php?focus=latest" class="iconify">
+													<i class="icon-playlist"></i>
+													Latest Uploads</a>
+												</li>
+											</ul>
+										</div>
+
+
+										<div class="col-md-4">
+											<ul class="mega-menu-submenu">
+
+
+                        
+							                    <li>
+													<a href="/mp3/creative-commons/free-music.php?focus=1" class="iconify">
+													<i class="icon-folder"></i>
+													Ambient (252 songs)</a>
+												</li>
+
+							  
+							                    <li>
+													<a href="/mp3/creative-commons/free-music.php?focus=2" class="iconify">
+													<i class="icon-folder"></i>
+													Breakbeat (178 songs)</a>
+												</li>
+
+							  
+							                    <li>
+													<a href="/mp3/creative-commons/free-music.php?focus=3" class="iconify">
+													<i class="icon-folder"></i>
+													Downtempo (423 songs)</a>
+												</li>
+
+							  
+							                    <li>
+													<a href="/mp3/creative-commons/free-music.php?focus=4" class="iconify">
+													<i class="icon-folder"></i>
+													Drum 'n' Bass (260 songs)</a>
+												</li>
+
+							  
+							                    <li>
+													<a href="/mp3/creative-commons/free-music.php?focus=13" class="iconify">
+													<i class="icon-folder"></i>
+													Dubstep (78 songs)</a>
+												</li>
+
+							  
+							                    <li>
+													<a href="/mp3/creative-commons/free-music.php?focus=5" class="iconify">
+													<i class="icon-folder"></i>
+													Electro (150 songs)</a>
+												</li>
+
+							  
+							                    <li>
+													<a href="/mp3/creative-commons/free-music.php?focus=6" class="iconify">
+													<i class="icon-folder"></i>
+													Hardcore (201 songs)</a>
+												</li>
+
+							  
+							                    <li>
+													<a href="/mp3/creative-commons/free-music.php?focus=7" class="iconify">
+													<i class="icon-folder"></i>
+													Hip Hop (451 songs)</a>
+												</li>
+
+							  
+							                    <li>
+													<a href="/mp3/creative-commons/free-music.php?focus=8" class="iconify">
+													<i class="icon-folder"></i>
+													House (180 songs)</a>
+												</li>
+
+							  
+							                    <li>
+													<a href="/mp3/creative-commons/free-music.php?focus=9" class="iconify">
+													<i class="icon-folder"></i>
+													Industrial (131 songs)</a>
+												</li>
+
+							  
+							                    <li>
+													<a href="/mp3/creative-commons/free-music.php?focus=14" class="iconify">
+													<i class="icon-folder"></i>
+													Other (54 songs)</a>
+												</li>
+
+							  
+							                    <li>
+													<a href="/mp3/creative-commons/free-music.php?focus=10" class="iconify">
+													<i class="icon-folder"></i>
+													Techno (158 songs)</a>
+												</li>
+
+							  
+							                    <li>
+													<a href="/mp3/creative-commons/free-music.php?focus=11" class="iconify">
+													<i class="icon-folder"></i>
+													Trance (204 songs)</a>
+												</li>
+
+							  
+							                    <li>
+													<a href="/mp3/creative-commons/free-music.php?focus=12" class="iconify">
+													<i class="icon-folder"></i>
+													UK Garage (12 songs)</a>
+												</li>
+
+							  											
+											</ul>
+										</div>
+                                        
+                                        
+									</div>
+								</div>
+							</li>
+						</ul>
+					</li><!-- eof music menu -->                    
+                    
+                                       
+
+					<li >
+						<a href="/loopynews/">New <i class="fa fa-star-o"></i></a>
+					</li>
+
+
+
+					<li class="menu-dropdown mega-menu-dropdown ">
+						<a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="javascript:;" class="dropdown-toggle">
+						Inspiration <i class="fa fa-lightbulb-o"></i>
+						</a>
+						<ul class="dropdown-menu" style="min-width: 200px;">
+							<li>
+								<div class="mega-menu-content">
+									<div class="row">
+                                    
+										<div class="col-md-12">
+											<ul class="mega-menu-submenu">
+                                                <li><small><strong>Stuck in your creative process?</strong> Try one of these.</small></li> 
+
+												<li>
+                                                    <a href="/remix-this-track/"><button class="btn orange btn-block"><small>REMIX THIS TRACK</small></button></a>
+												</li>
+
+												<!-- <li>
+                                                    <a href="#"><button class="btn orange btn-block"><small>I DARE YOU TO USE THESE SAMPLES</small></button></a>
+												</li> -->
+
+												<li>
+                                                    <a href="/oblique-strategy-card/"><button class="btn orange btn-block"><small>PICK AN OBLIQUE STRATEGY CARD</small></button></a>
+												</li>
+
+                                                                                                
+											</ul>
+										</div>
+                                        
+                                        
+                                        
+									</div>
+								</div>
+							</li>
+						</ul>
+					</li><!-- eof inspirations -->                    
+                    
+
+																							
+					<li >
+						<a href="/about/">About <i class="fa fa-info-circle"></i></a>
+					</li>
+
+
+
+				</ul>
+			</div>
+			<!-- END MEGA MENU -->
+		</div>
+	</div>
+	<!-- END HEADER MENU -->
+</div>
+<!-- END HEADER --><!-- BEGIN PAGE CONTAINER -->
+<div class="page-container">
+	<!-- BEGIN PAGE HEAD -->
+	<div class="page-head">
+		<div class="container">
+			<!-- BEGIN PAGE TITLE -->
+			<div class="page-title">
+				<h1 style="color: red;">Page Not Found (Error 404)</h1>
+			</div>
+			<!-- END PAGE TITLE -->
+		</div>
+	</div>
+	<!-- END PAGE HEAD -->
+	<!-- BEGIN PAGE CONTENT -->
+	<div class="page-content">
+		<div class="container">
+			<!-- BEGIN PAGE CONTENT INNER -->
+
+                  
+                              
+            <!-- end first row -->
+            
+            
+			<div class="row">
+            
+				<div class="col-md-12">
+					<div class="portlet light">
+						<div class="portlet-body">
+							<div class="row">
+								<div class="col-md-6">
+<p class="lead">May I help you find something?</p>
+                                    <p>If you think you've discovered a problem with our site, please let <a href="mailto:canton@sampleswap.org">canton@sampleswap.org</a> know.</p>
+                                    <p>Otherwise, maybe one of these buttons will help:</p>
+                        			<p><a href="/filebrowser-new.php"><button class="btn green btn-block">BROWSE SAMPLES <i class="fa fa-microphone"></i></button></a></p>
+                        			<p><a href="/mp3/creative-commons/free-music.php"><button class="btn green btn-block">BROWSE MUSIC <i class="fa fa-music"></i></button></a></p>
+                        			<p><a href="/about"><button class="btn green btn-block">ABOUT / HELP / F.A.Q. <i class="fa fa-question"></i></button></a></p>
+                                </div>
+								<div class="col-md-1"> </div>
+								<div class="col-md-5">
+                                	<img src="/images/missing-piece.jpg" width="100%" alt="Something is missing here." />
+								</div>
+                            </div>
+                        </div><!-- end portlet-body -->
+                  </div><!-- end portlet light -->
+
+
+
+                </div><!-- end col -->
+            
+            
+
+                  
+                  
+                </div><!-- end col -->
+                
+			</div><!-- end row -->
+            
+			<!-- END PAGE CONTENT INNER -->
+		</div>
+	</div>
+	<!-- END PAGE CONTENT -->
+</div>
+<!-- END PAGE CONTAINER -->
+
+<!-- BEGIN PRE-FOOTER -->
+<div class="page-prefooter">
+	<div class="container">
+		<div class="row">
+
+
+			<div class="col-md-3 col-sm-6 col-xs-12 footer-block">
+
+								<h2>BE GREEDY!</h2>
+				<p>Support SampleSwap and download the <a href="/donate">complete 9.4 GB  SampleSwap library</a> as a single ZIP file.</p>
+                <p><br /><a class="btn btn-md green" href="/donate/">DOWNLOAD EVERYTHING</a></p>
+                			</div>
+
+			<div class="col-md-3 col-sm-6 col-xs-12 footer-block">
+			  <h2>Let's Be Friends</h2>
+
+                <div style="width: 60px; float: left;"><iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Ffacebook.com%2Fsampleswap&amp;layout=box_count&amp;show_faces=true&amp;width=52&amp;action=like&amp;colorscheme=light&amp;height=65" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:52px; height:65px;" allowTransparency="true"></iframe></div>
+              
+				<ul class="social-icons">
+					<li>
+						<a href="https://www.facebook.com/sampleswap" data-original-title="facebook" class="facebook"></a>
+					</li>
+					<li>
+						<a href="https://twitter.com/sampleswaporg" data-original-title="twitter" class="twitter"></a>
+					</li>
+				</ul>
+			</div>
+
+
+			<div class="col-md-3 col-sm-6 col-xs-12 footer-block">
+
+				<h2>Help &amp; Contact</h2>
+				<address class="margin-bottom-20">
+				<a href="https://cantonbecker.com" target="_blank">Canton Becker</a> manages this site.<br>
+				 For help or contact information, <a href="/about/">click here</a>.</a>
+				</address>
+
+				<h2>Translate This Page</h2>
+
+
+<div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT, gaTrack: true, gaId: 'UA-876237-1'}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+		  </div>
+			<div class="col-md-3 col-sm-6 col-xs-12 footer-block">
+            <p style="text-align: center;"><a href="#" onClick="robotClick(); return(false);"><img id="footerRobot" src="/images/footer-robot-1.png" width="92" height="114" alt="Beep."/></a></p>
+            
+            </div>
+		</div>
+	</div>
+</div>
+
+<!-- END PRE-FOOTER -->
+<!-- BEGIN FOOTER -->
+<div class="page-footer">
+	<div class="container">
+		 <a href="/about/">Contact / About</a> 
+         &nbsp; &bull; &nbsp; 
+         <a href="/about/#privacy">Privacy Policy</a>
+         &nbsp; &bull; &nbsp; 
+         <a href="/about/#collapse_2_3">DMCA / Copyright Information</a>
+         
+                  
+	</div>
+</div>
+<div class="scroll-to-top">
+	<i class="icon-arrow-up"></i>
+</div>
+<!-- END FOOTER -->
+<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+<!-- BEGIN CORE PLUGINS -->
+<!--[if lt IE 9]>
+<script src="/assets/global/plugins/respond.min.js"></script>
+<script src="/assets/global/plugins/excanvas.min.js"></script> 
+<![endif]-->
+<script src="/assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+<script src="/assets/global/plugins/jquery-migrate.min.js" type="text/javascript"></script>
+<script src="/assets/global/plugins/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+<script src="/assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+<script src="/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script src="/assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+<script src="/assets/global/plugins/jquery.cokie.min.js" type="text/javascript"></script>
+<script src="/assets/global/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
+<!-- END CORE PLUGINS -->
+<script src="/assets/global/scripts/metronic.js" type="text/javascript"></script>
+<script src="/assets/admin/layout3/scripts/layout.js" type="text/javascript"></script>
+<script src="/assets/admin/layout3/scripts/demo.js" type="text/javascript"></script>
+<script src="/js/common.js" type="text/javascript"></script>
+
+<script>
+ jQuery(document).ready(function() { 
+  Metronic.init(); // init metronic core components
+  Layout.init(); // init current layout
+ });
+</script>
+<!-- END JAVASCRIPTS -->
+
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-876237-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
+
+	
+
+
+</body>
+<!-- END BODY -->
+</html>
